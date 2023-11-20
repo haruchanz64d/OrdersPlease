@@ -52,5 +52,5 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Orders Please.sln"
+    "dotnet.defaultSolution": "OrdersPlease.sln"
 }
