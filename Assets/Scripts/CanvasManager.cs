@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class CanvasManager : MonoBehaviour
 
     public Canvas gameOverCanvas;
     public Canvas gameSuccessCanvas;
+
 
     private void Awake()
     {
@@ -33,7 +35,8 @@ public class CanvasManager : MonoBehaviour
         gameSuccessCanvas.enabled = false;
     }
 
-    public void OnGameOver(){
+    public void OnGameOver()
+    {
         Time.timeScale = 0f;
         gameplayCanvas.enabled = true;
         pauseCanvas.enabled = false;

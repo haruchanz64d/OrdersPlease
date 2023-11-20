@@ -92,4 +92,13 @@ public class DragAndDrop : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // TODO: 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Bounding Box"))
+        {
+
+        }
+    }
 }

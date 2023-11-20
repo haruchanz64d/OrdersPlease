@@ -50,12 +50,12 @@ public class Customer : MonoBehaviour
         }
     }
 
-    private void SetSatisfied()
+    public void SetSatisfied()
     {
         isSatisfied = true;
     }
 
-    private void SetAngry()
+    public void SetAngry()
     {
         isAngry = true;
     }

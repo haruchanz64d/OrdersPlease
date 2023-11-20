@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private int customerCount;
     private float timer;
     private int score;
+    public int GetScore() { return score; }
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI customerCountText;
@@ -21,10 +22,17 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI ordersPlacedText;
     private GameObject currentCustomer;
     public CanvasManager canvasManager;
+    private bool isCustomerHalf = false;
+    public TextMeshProUGUI gameOverScoreText;
+    public TextMeshProUGUI gameSuccessScoreText;
 
     private void Start()
     {
-        timer = 30f;
+        if (isCustomerHalf)
+        {
+            timer = 15f;
+        }
+        timer = 20f;
         score = 0;
         StartCoroutine(SpawnCustomers());
     }
@@ -37,14 +45,9 @@ public class GameManager : MonoBehaviour
             timerText.SetText(timer.ToString("F0"));
         }
 
-        if (ordersPlaced >= 15)
+        if (customerCount >= 15)
         {
-            timer = 15f;
-        }
-
-        if (timer <= 0)
-        {
-            StartCoroutine(SpawnCustomers());
+            isCustomerHalf = true;
         }
 
         if (customerCount >= 30 && ordersPlaced == 30)
@@ -60,7 +63,7 @@ public class GameManager : MonoBehaviour
             OrderPlaced();
             ResetTimer();
         }
-        if (currentCustomer.GetComponent<Customer>().isAngry == true)
+        if (timer <= 0 || currentCustomer.GetComponent<Customer>().isAngry == true)
         {
             OrderFailed();
             ResetTimer();
@@ -84,7 +87,7 @@ public class GameManager : MonoBehaviour
     {
         ordersPlaced++;
         score += 200;
-        scoreText.SetText(score.ToString());
+        scoreText.SetText($"P{score}");
         ordersPlacedText.SetText(ordersPlaced.ToString());
         Destroy(currentCustomer);
         isCustomerPresent = false;
@@ -92,6 +95,7 @@ public class GameManager : MonoBehaviour
         if (ordersPlaced == 30)
         {
             canvasManager.OnGameSuccess();
+            gameSuccessScoreText.SetText($"You earned: P{score}");
         }
     }
 
@@ -105,13 +109,14 @@ public class GameManager : MonoBehaviour
         if (failedOrders == 5)
         {
             canvasManager.OnGameOver();
+            gameOverScoreText.SetText($"You earned: P{score}");
         }
     }
 
     private void ResetTimer()
     {
-        timer = 30f;
-        if (ordersPlaced >= 15)
+        timer = 20f;
+        if (isCustomerHalf)
         {
             timer = 15f;
         }
