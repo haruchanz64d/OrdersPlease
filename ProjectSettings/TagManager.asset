@@ -12,6 +12,9 @@ TagManager:
   - Gulaman - Full
   - Customer
   - Raw Food
+  - Bounding Box
+  - Food Spawner
+  - Edge
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,10 @@ public class CanvasManager : MonoBehaviour
     public Canvas gameOverCanvas;
     public Canvas gameSuccessCanvas;
 
+    public AudioSource gameplayBGM;
+    public AudioSource victoryBGM;
+    public AudioSource gameoverBGM;
+
 
     private void Awake()
     {
@@ -20,6 +24,7 @@ public class CanvasManager : MonoBehaviour
     public void OnGameplayPause()
     {
         Time.timeScale = 0f;
+        gameplayBGM.Stop();
         gameplayCanvas.enabled = true;
         pauseCanvas.enabled = true;
         gameOverCanvas.enabled = false;
@@ -29,6 +34,8 @@ public class CanvasManager : MonoBehaviour
     public void OnGameplayResume()
     {
         Time.timeScale = 1f;
+        gameplayBGM.Stop();
+        gameplayBGM.PlayDelayed(1.5f);
         gameplayCanvas.enabled = true;
         pauseCanvas.enabled = false;
         gameOverCanvas.enabled = false;
@@ -38,6 +45,8 @@ public class CanvasManager : MonoBehaviour
     public void OnGameOver()
     {
         Time.timeScale = 0f;
+        gameplayBGM.Stop();
+        gameoverBGM.PlayDelayed(1.5f);
         gameplayCanvas.enabled = true;
         pauseCanvas.enabled = false;
         gameOverCanvas.enabled = true;
@@ -47,6 +56,7 @@ public class CanvasManager : MonoBehaviour
     public void OnGameSuccess()
     {
         Time.timeScale = 0f;
+        victoryBGM.PlayDelayed(1.5f);
         gameplayCanvas.enabled = true;
         pauseCanvas.enabled = false;
         gameOverCanvas.enabled = false;

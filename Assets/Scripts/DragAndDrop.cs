@@ -89,6 +89,10 @@ public class DragAndDrop : MonoBehaviour
                 other.gameObject.GetComponent<ContainerManager>().Cook();
                 Destroy(gameObject);
             }
+            else if(other.CompareTag("Edge"))
+            {
+                Destroy(gameObject);
+            }
             Destroy(gameObject);
         }
     }
