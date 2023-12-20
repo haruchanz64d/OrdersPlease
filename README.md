@@ -1,7 +1,7 @@
 
 # Orders Please!
 ## Description:
-Step into the bustling world of a food street vendor! Customers with rumbling stomachs and specific cravings will appear, barking their orders in a flurry. Can you decipher their requests and whip up their desired dishes before the timer runs out? The faster you complete orders, the more customers flock your stall, and the faster they leave, satisfied and full. But be warned, miss too many orders and your loyal patrons will slip away, leaving you with a pile of uneaten food and a deflated reputation.
+You’re a street food vendor on campus, where your job is to satisfy students’ cravings for delicious street food, but against the clock. Time is of the essence, so keep track of each customer’s request to ensure their hunger is satisfied with culinary delight.
 
 ## Genre:
 Fast-paced Food Order Game
