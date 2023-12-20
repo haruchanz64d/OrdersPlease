@@ -20,6 +20,10 @@ The game ends either when you successfully complete a set number of orders or mi
 - Engaging timer mechanic that keeps the action fast-paced.
 - Progressive difficulty ramp-up to test your skills.
 
+## Installation
+
+Download the installer on [itch.io](https://haruchan-dev.itch.io/orders-please)
+
 
 ## Tech Stack
 
