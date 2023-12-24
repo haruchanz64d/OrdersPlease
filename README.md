@@ -4,7 +4,7 @@
 You’re a street food vendor on campus, where your job is to satisfy students’ cravings for delicious street food, but against the clock. Time is of the essence, so keep track of each customer’s request to ensure their hunger is satisfied with culinary delight.
 
 ## Genre:
-Fast-paced Food Order Game
+Simulatiom
 
 ### Mechanics:
 Customers arrive with their orders, displayed for a limited time.
@@ -14,19 +14,10 @@ Unfulfilled orders lead to disgruntled customers who leave, and the next one arr
 After completing 15 orders, the timer for each order speeds up, increasing the challenge.
 The game ends either when you successfully complete a set number of orders or miss a total of five.
 
-### Features:
-
-- Diverse customers with unique food preferences.
-- Engaging timer mechanic that keeps the action fast-paced.
-- Progressive difficulty ramp-up to test your skills.
-
 ## Installation
-
 Download the installer on [itch.io](https://haruchan-dev.itch.io/orders-please)
 
-
 ## Tech Stack
-
 **Game Engine:** Unity Engine
 
 **Programming Language:** C#
