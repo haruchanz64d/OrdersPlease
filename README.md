@@ -4,7 +4,7 @@
 You’re a street food vendor on campus, where your job is to satisfy students’ cravings for delicious street food, but against the clock. Time is of the essence, so keep track of each customer’s request to ensure their hunger is satisfied with culinary delight.
 
 ## Genre:
-Simulatiom
+Simulation
 
 ### Mechanics:
 Customers arrive with their orders, displayed for a limited time.
